@@ -1,5 +1,4 @@
-
-import { Auth0Client } from "@auth0/auth0-react";
+import { Auth0Provider } from "@auth0/auth0-react";
 
 export const auth0Config = {
   domain: process.env.NEXT_PUBLIC_AUTH0_DOMAIN,
@@ -8,4 +7,3 @@ export const auth0Config = {
     redirect_uri: typeof window !== "undefined" ? window.location.origin : "",
   },
 };
-
