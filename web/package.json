@@ -14,15 +14,17 @@
     "react-dom": "latest",
     "@auth0/auth0-react": "latest",
     "gray-matter": "latest",
-    "lucide-react": "latest"
+    "lucide-react": "latest",
+    "@tailwindcss/typography": "latest"
   },
   "devDependencies": {
     "typescript": "latest",
     "@types/node": "latest",
     "@types/react": "latest",
     "@types/react-dom": "latest",
-    "autoprefixer": "latest",
+    "tailwindcss": "latest",
     "postcss": "latest",
-    "tailwindcss": "latest"
+    "autoprefixer": "latest",
+    "@tailwindcss/postcss": "latest"
   }
 }
