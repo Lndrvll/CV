@@ -5,8 +5,9 @@ import type { NextRequest } from "next/server";
 export async function middleware(request: NextRequest) {
   const { pathname } = request.nextUrl;
 
-  // 1. Allow the home page and public assets to be viewed without Auth0
-  if (pathname === "/" || pathname === "/public-home") {
+  // 1. Allow the home page and static assets to be viewed without Auth0
+  // We use a regex or a simple check to ensure / is always open
+  if (pathname === "/" || pathname.startsWith("/_next") || pathname.startsWith("/static") || pathname.startsWith("/favicon")) {
     return NextResponse.next();
   }
 
@@ -19,7 +20,7 @@ export async function middleware(request: NextRequest) {
       return NextResponse.redirect(new URL("/welcome", request.url));
     }
 
-    // If they are trying to access the auto-router, perform the semantic mapping
+    // Handle the auto-router
     if (pathname === "/lenses/auto") {
       const searchParams = request.nextUrl.searchParams;
       const email = searchParams.get("email") || "user@example.com";
