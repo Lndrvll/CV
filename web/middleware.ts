@@ -5,9 +5,16 @@ import type { NextRequest } from "next/server";
 export async function middleware(request: NextRequest) {
   const { pathname } = request.nextUrl;
 
-  // 1. Allow the home page and static assets to be viewed without Auth0
-  // We use a regex or a simple check to ensure / is always open
-  if (pathname === "/" || pathname.startsWith("/_next") || pathname.startsWith("/static") || pathname.startsWith("/favicon")) {
+  // 1. ABSOLUTE BYPASS: Home page and static assets
+  // We check for exactly "/" or common static paths to ensure NO auth logic ever runs here
+  if (
+    pathname === "/" || 
+    pathname === "/public-home" ||
+    pathname.startsWith("/_next") || 
+    pathname.startsWith("/static") || 
+    pathname.startsWith("/favicon") ||
+    pathname.startsWith("/api/public")
+  ) {
     return NextResponse.next();
   }
 
@@ -15,12 +22,12 @@ export async function middleware(request: NextRequest) {
   if (pathname.startsWith("/lenses")) {
     const token = request.cookies.get("auth0-token")?.value;
     
-    // If not logged in, redirect to the welcome/login page
+    // If not logged in, send them to the welcome page
     if (!token) {
       return NextResponse.redirect(new URL("/welcome", request.url));
     }
 
-    // Handle the auto-router
+    // Auto-router logic for /lenses/auto
     if (pathname === "/lenses/auto") {
       const searchParams = request.nextUrl.searchParams;
       const email = searchParams.get("email") || "user@example.com";
