@@ -1,0 +1,4 @@
+
+Understanding of federation and SSO protocols (SAML, OAuth 2.0 and OpenID) identity aggregation in production environment or testing solutions in local sandbox.
+
+Organization I worked with use Active Directory as an on premise system to manage their users identity, permission or [[Role-Based Access Control & Policy Enforcment]]. To implement either Sailpoint or software as a service solution, I had to understand the possible authentication available depending on client's existing architecture. From that point, I could take the necessary development step to work for a secure solution. [[Directory & Connector Integration]] might require OAuth2 and OpenID Connect. Federation services should be necessary or  cloud solutions adopted depending on the client and supplier mutual decision, in my experience as an independent or part of Indigo Consulting team.

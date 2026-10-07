@@ -1,0 +1,3 @@
+The work as an IAM consultant included identity LCM workflow development and configuration for the client. Enforcing compliance by making sure access requests are automated, cycles correctly triggered and identities provisioning following the right state(joiner-mover-leaver).
+
+As a developer, [[Java, XML, SQL, Powershell , Bash Development & Scripting]] was a strong part of the Identity Lifecycle Management as the client wish to automates Sailpoint processes as much as possible.

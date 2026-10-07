@@ -1,0 +1,1 @@
+![[certificate_AzureFondamentals.pdf]]
