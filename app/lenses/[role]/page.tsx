@@ -1,5 +1,5 @@
 
-import { getWikiPage } from "../../../lib/wiki";
+import { getWikiPage } from "../../lib/wiki";
 
 export default async function LensPage({ params, searchParams }: any) {
   const role = searchParams.role || "public";

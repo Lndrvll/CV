@@ -1,5 +1,5 @@
 
-import { getWikiPage } from "../lib/wiki";
+import { getWikiPage } from "./lib/wiki";
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 

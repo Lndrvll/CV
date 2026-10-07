@@ -2,7 +2,7 @@ import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
 
-const vaultPath = path.join(process.cwd(), "..");
+const vaultPath = path.join(process.cwd());
 
 export async function getWikiPage(relativePath: string) {
   // The comment below tells Turbopack not to trace the entire filesystem from this call
