@@ -1,0 +1,29 @@
+{
+  "name": "smart-portfolio-root",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "build": "cd web && npm install && npm run build"
+  },
+  "dependencies": {
+    "next": "latest",
+    "react": "latest",
+    "react-dom": "latest",
+    "@auth0/auth0-react": "latest",
+    "gray-matter": "latest",
+    "lucide-react": "latest",
+    "@tailwindcss/typography": "latest",
+    "react-markdown": "latest",
+    "remark-gfm": "latest"
+  },
+  "devDependencies": {
+    "typescript": "latest",
+    "@types/node": "latest",
+    "@types/react": "latest",
+    "@types/react-dom": "latest",
+    "tailwindcss": "latest",
+    "postcss": "latest",
+    "autoprefixer": "latest",
+    "@tailwindcss/postcss": "latest"
+  }
+}
