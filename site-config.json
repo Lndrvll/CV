@@ -1,0 +1,12 @@
+{
+  "siteName": "Jeremie Landreville Portfolio",
+  "publicPage": "public-home.md",
+  "lenses": {
+    "cybersecurity": "LLM-Wiki/pages/Lens - Cybersecurity.md",
+    "audiovisual": "LLM-Wiki/pages/Lens - Audiovisual.md"
+  },
+  "auth": {
+    "provider": "CIAM",
+    "enabled": true
+  }
+}
