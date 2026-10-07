@@ -19,7 +19,7 @@ export default async function Home() {
           </ReactMarkdown>
         </div>
         <div className="flex justify-center">
-          <a href="/welcome" className="group px-10 py-4 bg-gray-900 text-white rounded-full font-medium hover:bg-gray-800 transition-all duration-300 hover:shadow-xl hover:shadow-gray-200 active:scale-95">
+          <a href="/welcome" className="text-lg font-light text-gray-500 hover:text-gray-900 transition-colors duration-300 border-b border-gray-200 hover:border-gray-900 pb-1">
             Enter Professional Portfolio
           </a>
         </div>
