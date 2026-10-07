@@ -1,0 +1,33 @@
+name: Deploy Portfolio
+on:
+  push:
+    branches:
+      - main
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+ la
+      - name: Install Dependencies
+        run: npm install -g quartz # Using Quartz for Obsidian-to-HTML conversion
+
+      - name: Build Site
+        run: npx quartz build
+
+      - name: Upload Artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: public
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
