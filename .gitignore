@@ -1,0 +1,20 @@
+# .gitignore
+# Private documents and sensitive data
+Annexe/
+*.pdf
+*.jpg
+*.png
+*.jpeg
+
+# System files
+.DS_Store
+Thumbs.db
+
+# Node/Web development
+node_modules/
+.next/
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
